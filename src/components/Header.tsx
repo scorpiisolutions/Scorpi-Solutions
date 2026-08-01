@@ -36,7 +36,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-md">
               <span className="text-white font-bold text-lg">S</span>
             </div>
-            <span className="text-slate-800 font-bold text-xl">Scorpii Solutions</span>
+            <span className="text-slate-900 font-bold text-xl">Scorpii Solutions</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -59,12 +59,6 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 className="text-slate-700 px-6 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 font-medium"
               >
                 About
-              </button>
-              <button
-                onClick={() => handleNavigation('home', 'faq')}
-                className="text-slate-700 px-6 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 font-medium"
-              >
-                FAQ
               </button>
               <button
                 onClick={() => handleNavigation('home', 'contact')}
@@ -107,12 +101,6 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 className="text-slate-700 block px-4 py-3 rounded-lg w-full text-left transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 font-medium"
               >
                 About
-              </button>
-              <button
-                onClick={() => handleNavigation('home', 'faq')}
-                className="text-slate-700 block px-4 py-3 rounded-lg w-full text-left transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 font-medium"
-              >
-                FAQ
               </button>
               <button
                 onClick={() => handleNavigation('home', 'contact')}

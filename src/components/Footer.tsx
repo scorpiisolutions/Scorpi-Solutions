@@ -127,14 +127,64 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
 
             {/* Services & Social */}
             <div>
-              <h3 className="font-bold text-slate-800 mb-4">Our Services(Coming Soon)</h3>
-              <ul className="space-y-3 text-slate-600 mb-6">
-                <li>Virtual Reality Ads</li>
-                <li>Interactive Social Media</li>
-                <li>Augmented Reality</li>
-                <li>AI-Personalized Campaigns</li>
-                <li>Sustainable Solutions</li>
-                <li>Brand Strategy</li>
+              <h3 className="font-bold text-slate-800 mb-4">Our Services</h3>
+              <ul className="space-y-2.5 text-slate-600 mb-6">
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    Statutory & Liaisoning
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    Event Management
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    DOOH Advertising
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    OOH Advertising
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    Media Services
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    Brand Activations
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('service')}
+                    className="text-slate-600 hover:text-blue-600 transition-colors duration-200 text-left text-sm"
+                  >
+                    Ad Zen Bottle Ads
+                  </button>
+                </li>
               </ul>
               
               <h4 className="font-bold text-slate-800 mb-3">Follow Us</h4>

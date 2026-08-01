@@ -1,181 +1,119 @@
-import { Card, CardContent } from './ui/card';
-import { Target, Eye, Lightbulb, TrendingUp, Users, Award, Rocket, Zap, Globe, BarChart3, Shield, Heart, Leaf } from 'lucide-react';
-import { Button } from './ui/button';
+import { Target, Users, ShieldCheck, Award, ThumbsUp, Clock, FileText, CheckCircle2, Navigation, Zap, Briefcase, Eye } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+
+const coreValues = [
+  { name: "Integrity", icon: <ShieldCheck className="w-6 h-6 text-blue-600" /> },
+  { name: "Professional Excellence", icon: <Award className="w-6 h-6 text-blue-600" /> },
+  { name: "Customer Commitment", icon: <ThumbsUp className="w-6 h-6 text-blue-600" /> },
+  { name: "Transparency", icon: <Eye className="w-6 h-6 text-blue-600" /> },
+  { name: "Innovation", icon: <Zap className="w-6 h-6 text-blue-600" /> },
+  { name: "Timely Delivery", icon: <Clock className="w-6 h-6 text-blue-600" /> },
+  { name: "Quality Service", icon: <CheckCircle2 className="w-6 h-6 text-blue-600" /> },
+  { name: "Long-Term Partnerships", icon: <Users className="w-6 h-6 text-blue-600" /> }
+];
+
+const whyChooseUs = [
+  "One-stop solution for statutory approvals and compliance",
+  "Experienced government liaisoning professionals",
+  "Complete event management solutions",
+  "Premium DOOH & OOH advertising network",
+  "Integrated media planning and branding",
+  "Experienced project management team",
+  "End-to-end execution",
+  "Customer-centric approach",
+  "Reliable documentation support",
+  "Timely project delivery"
+];
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <p className="text-blue-600 font-semibold tracking-wider uppercase mb-4 text-lg">
-            INNOVATE. ADVERTISE. CELEBRATE.
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Experienced & <span className="text-blue-600">Innovative Professionals</span>
-          </h2>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            We blend creativity with technology to achieve measurable results, building lasting relationships 
-            between brands and their customers through data-driven strategies and cutting-edge innovation.
-          </p>
-        </div>
-
-        {/* Professional Image Showcase */}
-        <div className="mb-20 animate-gentle-float">
-          <div className="aspect-video rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto">
+    <section id="about" className="section-padding bg-slate-50/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+        
+        {/* Who We Are */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center animate-fade-in-up">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              Who <span className="text-blue-600">We Are</span>
+            </h2>
+            <p className="text-lg text-slate-700 leading-relaxed font-medium">
+              Scorpii Solutions is a multidisciplinary business solutions company specializing in statutory approvals, government liaisoning, regulatory compliance, event management, outdoor advertising, digital media, and brand activation services.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              We help businesses, developers, institutions, and organizations navigate complex regulatory processes while delivering impactful marketing and branding solutions.
+            </p>
+          </div>
+          <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2UlMjBwcm9mZXNzaW9uYWwlMjB0ZWFtfGVufDF8fHx8MTc1OTA0Mzk5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Modern office workspace with professional team"
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200"
+              alt="Professional team discussing corporate solutions"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Company Values Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          {/* Who We Are */}
-          <div className="clean-card p-8 animate-slide-in">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                <Users className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800">Who We Are</h3>
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-8 animate-slide-in">
+          <div className="bg-white rounded-3xl p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300">
+            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+              <Target className="h-7 w-7 text-blue-600" />
             </div>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Experienced and innovative advertising professionals who combine creative vision with strategic thinking. 
-              Our team brings decades of industry expertise, cutting-edge technology knowledge, and a proven track record 
-              of delivering exceptional results for businesses of all sizes.
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
+            <p className="text-slate-700 leading-relaxed text-lg">
+              Our mission is to simplify regulatory compliance, deliver exceptional event experiences, and create powerful brand visibility through innovative advertising and media solutions while maintaining professionalism, integrity, and excellence.
             </p>
-            <div className="flex items-center space-x-4 pt-4">
-              <div className="trust-badge">
-                <Award className="h-4 w-4" />
-                <span>Industry Leaders</span>
-              </div>
-              <div className="trust-badge">
-                <Shield className="h-4 w-4" />
-                <span>Certified Experts</span>
-              </div>
-            </div>
           </div>
 
-          {/* Our Mission */}
-          <div className="clean-card p-8 animate-slide-in" style={{animationDelay: '0.1s'}}>
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                <Target className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800">Our Mission</h3>
+          <div className="bg-white rounded-3xl p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300">
+            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+              <Navigation className="h-7 w-7 text-blue-600" />
             </div>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Blending creativity with technology to achieve measurable results. We create advertising solutions 
-              that not only capture attention but drive real business growth, building lasting relationships 
-              between brands and their customers through strategic innovation and authentic storytelling.
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
+            <p className="text-slate-700 leading-relaxed text-lg">
+              To become India's most trusted integrated business solutions company by delivering compliance, advertising, media, and event management services with innovation and reliability.
             </p>
-            <div className="flex items-center space-x-4 pt-4">
-              <div className="trust-badge">
-                <Heart className="h-4 w-4" />
-                <span>Relationship-Focused</span>
-              </div>
-              <div className="trust-badge">
-                <TrendingUp className="h-4 w-4" />
-                <span>Growth-Driven</span>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Our Values */}
-        <div className="clean-card p-8 mb-20 animate-fade-in-up">
-          <div className="flex items-center mb-8 justify-center">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-              <Award className="h-6 w-6 text-blue-600" />
-            </div>
-            <h3 className="text-3xl font-bold text-slate-800">Our Core Values</h3>
+        {/* Core Values */}
+        <div className="animate-fade-in-up">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              Our <span className="text-blue-600">Core Values</span>
+            </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-blue-600" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {coreValues.map((value, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-slate-50 group-hover:bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
+                  {value.icon}
+                </div>
+                <h4 className="font-bold text-slate-900">{value.name}</h4>
               </div>
-              <h4 className="text-lg font-semibold text-slate-800 mb-2">Trust</h4>
-              <p className="text-slate-600 text-sm">Transparent communication and reliable results in every project.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="h-8 w-8 text-blue-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-slate-800 mb-2">Innovation</h4>
-              <p className="text-slate-600 text-sm">Cutting-edge technology and creative solutions for modern challenges.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Leaf className="h-8 w-8 text-blue-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-slate-800 mb-2">Sustainability</h4>
-              <p className="text-slate-600 text-sm">Eco-friendly campaigns and responsible business practices.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-8 w-8 text-blue-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-slate-800 mb-2">Client Success</h4>
-              <p className="text-slate-600 text-sm">Your growth and success is our primary mission and focus.</p>
-            </div>
+            ))}
           </div>
         </div>
 
         {/* Why Choose Us */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-            Why Choose <span className="text-blue-600">Scorpii Solutions?</span>
-          </h3>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            We offer unparalleled expertise in digital marketing with a focus on measurable results, 
-            innovative strategies, and long-term partnerships that grow with your business.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="feature-card text-center animate-slide-in">
-            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <BarChart3 className="h-8 w-8 text-blue-600" />
-            </div>
-            <h4 className="text-xl font-semibold text-slate-800 mb-3">Data-Driven Strategies</h4>
-            <p className="text-slate-600">
-              Advanced analytics and market insights power every campaign decision for maximum ROI.
-            </p>
+        <div className="animate-fade-in-up bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div className="text-center mb-12 relative z-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+              Why Choose <span className="text-blue-400">Scorpii Solutions?</span>
+            </h2>
           </div>
-
-          <div className="feature-card text-center animate-slide-in" style={{animationDelay: '0.1s'}}>
-            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Globe className="h-8 w-8 text-blue-600" />
-            </div>
-            <h4 className="text-xl font-semibold text-slate-800 mb-3">Global Reach</h4>
-            <p className="text-slate-600">
-              Worldwide network of partnerships and platforms to amplify your brand across every market.
-            </p>
-          </div>
-
-          <div className="feature-card text-center animate-slide-in" style={{animationDelay: '0.2s'}}>
-            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-blue-600" />
-            </div>
-            <h4 className="text-xl font-semibold text-slate-800 mb-3">Cutting-Edge Technology</h4>
-            <p className="text-slate-600">
-              Latest tools and platforms including AI, AR/VR, and advanced automation for superior results.
-            </p>
-          </div>
-
-          <div className="feature-card text-center animate-slide-in" style={{animationDelay: '0.3s'}}>
-            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="h-8 w-8 text-blue-600" />
-            </div>
-            <h4 className="text-xl font-semibold text-slate-800 mb-3">Proven Results</h4>
-            <p className="text-slate-600">
-              Long-term partnerships built on trust, transparency, and consistent delivery of exceptional results.
-            </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+            {whyChooseUs.map((feature, idx) => (
+              <div key={idx} className="flex items-start space-x-3 bg-slate-800/90 border border-slate-700/80 p-5 rounded-2xl shadow-sm hover:bg-slate-800 transition-colors">
+                <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                <span className="text-slate-100 font-semibold leading-snug">{feature}</span>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );

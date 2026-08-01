@@ -66,10 +66,10 @@ export function ContactSection() {
     <section id="contact" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
             Let's Build Your <span className="text-blue-600">Success Story</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-700 max-w-3xl mx-auto font-medium">
             Ready to elevate your brand with innovative advertising solutions? 
             Contact our experienced team to discuss your marketing goals and discover how we can help you achieve measurable growth.
           </p>
@@ -83,13 +83,13 @@ export function ContactSection() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                   <Send className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-800">Send Us a Message</h3>
+                <h3 className="text-2xl font-bold text-slate-900">Send Us a Message</h3>
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-slate-700 font-medium">Full Name *</Label>
+                    <Label htmlFor="name" className="text-slate-900 font-semibold">Full Name *</Label>
                     <Input
                       id="name"
                       name="name"
@@ -97,12 +97,12 @@ export function ContactSection() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="form-input"
+                      className="form-input text-slate-900"
                       placeholder="Your full name"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-slate-700 font-medium">Email Address *</Label>
+                    <Label htmlFor="email" className="text-slate-900 font-semibold">Email Address *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -110,27 +110,27 @@ export function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="form-input"
+                      className="form-input text-slate-900"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="company" className="text-slate-700 font-medium">Company Name</Label>
+                  <Label htmlFor="company" className="text-slate-900 font-semibold">Company Name</Label>
                   <Input
                     id="company"
                     name="company"
                     type="text"
                     value={formData.company}
                     onChange={handleChange}
-                    className="form-input"
+                    className="form-input text-slate-900"
                     placeholder="Your company name (optional)"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-slate-700 font-medium">Message *</Label>
+                  <Label htmlFor="message" className="text-slate-900 font-semibold">Message *</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -138,7 +138,7 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="form-input resize-none"
+                    className="form-input resize-none text-slate-900"
                     placeholder="Tell us about your business goals, target audience, and how we can help you achieve success..."
                   />
                 </div>
@@ -146,7 +146,7 @@ export function ContactSection() {
                 <Button 
                   type="submit"
                   disabled={loading}
-                  className="w-full btn-primary text-white py-4 rounded-lg text-lg font-medium"
+                  className="w-full btn-primary text-white py-4 rounded-lg text-lg font-semibold"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </Button>
@@ -158,15 +158,15 @@ export function ContactSection() {
           <div className="space-y-6">
             {/* Contact Details */}
             <div id="contact-info" className="clean-card p-6 animate-slide-in" style={{animationDelay: '0.1s'}}>
-              <h3 className="text-xl font-bold text-slate-800 mb-6">Get in Touch</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Get in Touch</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800 mb-1">Email Us</h4>
-                    <p className="text-slate-600">scorpiisolutions@gmail.com</p>
+                    <h4 className="font-bold text-slate-900 mb-1">Email Us</h4>
+                    <p className="text-slate-700 font-medium">scorpiisolutions@gmail.com</p>
                   </div>
                 </div>
                 
@@ -175,9 +175,9 @@ export function ContactSection() {
                     <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800 mb-1">Call Us</h4>
-                    <p className="text-slate-600">+91 9945939407</p>
-                    <p className="text-sm text-slate-500">Mon-Sat 9AM-6PM EST</p>
+                    <h4 className="font-bold text-slate-900 mb-1">Call Us</h4>
+                    <p className="text-slate-700 font-medium">+91 9945939407</p>
+                    <p className="text-xs text-slate-500 mt-0.5">Mon-Sat 9AM-6PM EST</p>
                   </div>
                 </div>
                 
@@ -186,8 +186,8 @@ export function ContactSection() {
                     <MapPin className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800 mb-1">Visit Us</h4>
-                    <p className="text-slate-600">#22, Venkatappa Layout, Bidadi,<br /> Ramanagara TQ & DT,<br />Karnataka 562109</p>
+                    <h4 className="font-bold text-slate-900 mb-1">Visit Us</h4>
+                    <p className="text-slate-700 font-medium">#22, Venkatappa Layout, Bidadi,<br /> Ramanagara TQ & DT,<br />Karnataka 562109</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ export function ContactSection() {
 
             {/* Social Media */}
             <div className="clean-card p-6 animate-slide-in" style={{animationDelay: '0.2s'}}>
-              <h3 className="text-lg font-bold text-slate-800 mb-4">Connect With Us</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Connect With Us</h3>
               <div className="grid grid-cols-2 gap-3">
                 <a 
                   href="https://www.facebook.com/share/1Cr4TxXhg2/"

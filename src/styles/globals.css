@@ -204,6 +204,17 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+/* Override body gradient for dark sections */
+#service {
+  background: linear-gradient(to bottom, #020617, #0f172a, #1e293b) !important;
+  background-size: auto !important;
+  animation: none !important;
+}
+
+#service > .bg-slate-900 {
+  background-color: #0f172a !important;
+}
+
 /* Professional Blue Button Styles */
 .btn-primary {
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
