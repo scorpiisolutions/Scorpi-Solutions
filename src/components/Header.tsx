@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 interface HeaderProps {
   currentPage: 'home' | 'service' | 'terms' | 'privacy';
@@ -32,11 +33,8 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavigation('home')}>
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
-            <span className="text-slate-900 font-bold text-xl">Scorpii Solutions</span>
+          <div className="flex items-center cursor-pointer py-1" onClick={() => handleNavigation('home')}>
+            <img src={logoImg} alt="Scorpii Solutions" className="h-10 sm:h-12 w-auto object-contain" />
           </div>
 
           {/* Desktop Navigation */}

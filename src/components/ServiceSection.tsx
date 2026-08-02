@@ -41,13 +41,14 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import serviceStatutoryImg from '../assets/service_statutory.png';
 import serviceEventsImg from '../assets/service_events.png';
 import serviceDoohImg from '../assets/service_dooh.png';
+import oohAdvertisingImg from '../assets/ooh_advertising.jpg';
 
 // High-quality images for services with local asset fallbacks
 const serviceStatutory = serviceStatutoryImg;
 const serviceEvents = serviceEventsImg;
 const serviceDooh = serviceDoohImg;
 const adZenBottles = "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&q=80&w=800";
-const serviceOoh = "https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=800";
+const serviceOoh = oohAdvertisingImg;
 const serviceMedia = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800";
 const serviceActivations = "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800";
 

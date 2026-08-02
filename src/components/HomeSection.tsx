@@ -72,14 +72,23 @@ export function HomeSection() {
   };
 
   return (
-    <section id="home" className="pt-16 section-padding bg-gradient-to-br from-blue-50 to-white">
+    <section id="home" className="pt-20 pb-16 md:pt-24 md:pb-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8 z-10">
-            <div className="space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 px-4 py-1.5 rounded-full text-blue-600 text-sm font-bold tracking-wide uppercase shadow-sm">
-                <Sparkles className="h-4 w-4" />
+            <div className="space-y-4">
+              {/* Slogan */}
+              <div className="flex items-center space-x-2.5">
+                <Sparkles className="h-5 w-5 text-blue-600 shrink-0" />
+                <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                  “The <span className="text-blue-600">better</span> way, the <span className="text-blue-600">better</span> thing”
+                </span>
+              </div>
+
+              {/* Integrated Business Solutions Badge */}
+              <div className="inline-flex items-center space-x-2 bg-blue-100/80 border border-blue-200 px-4 py-1.5 rounded-full text-blue-700 text-sm font-bold tracking-wide uppercase shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-blue-600"></span>
                 <span>Integrated Business Solutions</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15]">

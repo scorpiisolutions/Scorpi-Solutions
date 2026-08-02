@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 interface FooterProps {
   currentPage: 'home' | 'service' | 'terms' | 'privacy';
@@ -36,11 +37,9 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-md">
-                  <span className="text-white font-bold text-lg">S</span>
-                </div>
-                <span className="text-slate-800 font-bold text-2xl">Scorpii Solutions</span>
+              <div className="flex flex-col items-start mb-4 cursor-pointer" onClick={() => handleNavigation('home')}>
+                <img src={logoImg} alt="Scorpii Solutions" className="h-12 w-auto object-contain mb-1" />
+                <p className="text-blue-600 text-xs sm:text-sm font-semibold italic tracking-wide">"The better way, the better thing"</p>
               </div>
               <p className="text-slate-600 mb-6 max-w-md leading-relaxed">
                 Experienced advertising professionals delivering innovative, technology-driven solutions 

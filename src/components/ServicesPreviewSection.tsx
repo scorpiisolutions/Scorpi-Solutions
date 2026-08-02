@@ -14,6 +14,9 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/button';
 
+import governmentLiaisonImg from '../assets/government_liaisoning.jpg';
+import oohAdvertisingImg from '../assets/ooh_advertising.jpg';
+
 interface ServicesPreviewSectionProps {
   setCurrentPage: (page: 'home' | 'service' | 'terms' | 'privacy') => void;
   setActiveCategory: (category: string | null) => void;
@@ -47,7 +50,7 @@ const previewData = [
     id: "statutory-approvals",
     title: "Government Liaisoning",
     description: "Representing client interests in front of municipal bodies, utility boards, and state secretariats.",
-    imageUrl: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&q=80&w=800",
+    imageUrl: governmentLiaisonImg,
     iconName: "Briefcase"
   },
   {
@@ -82,7 +85,7 @@ const previewData = [
     id: "ooh-advertising",
     title: "OOH Advertising",
     description: "Traditional highway billboards, hoardings, transit wrappers, and auto/cab branding.",
-    imageUrl: "https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=800",
+    imageUrl: oohAdvertisingImg,
     iconName: "Map"
   },
   {
