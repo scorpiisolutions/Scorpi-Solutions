@@ -54,20 +54,14 @@ export function AboutSection() {
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 animate-slide-in">
-          <div className="bg-white rounded-3xl p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300">
-            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-              <Target className="h-7 w-7 text-blue-600" />
-            </div>
+          <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
             <p className="text-slate-700 leading-relaxed text-lg">
               Our mission is to simplify regulatory compliance, deliver exceptional event experiences, and create powerful brand visibility through innovative advertising and media solutions while maintaining professionalism, integrity, and excellence.
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300">
-            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-              <Navigation className="h-7 w-7 text-blue-600" />
-            </div>
+          <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
             <p className="text-slate-700 leading-relaxed text-lg">
               To become India's most trusted integrated business solutions company by delivering compliance, advertising, media, and event management services with innovation and reliability.
@@ -106,9 +100,11 @@ export function AboutSection() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
             {whyChooseUs.map((feature, idx) => (
-              <div key={idx} className="flex items-start space-x-3 bg-slate-800/90 border border-slate-700/80 p-5 rounded-2xl shadow-sm hover:bg-slate-800 transition-colors">
-                <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <span className="text-slate-100 font-semibold leading-snug">{feature}</span>
+              <div key={idx} className="flex items-center space-x-4 p-5 rounded-2xl why-choose-card cursor-default">
+                <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center shrink-0 border border-blue-500/20">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                </div>
+                <span className="text-slate-100 font-semibold text-sm leading-snug">{feature}</span>
               </div>
             ))}
           </div>

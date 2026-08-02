@@ -47,14 +47,14 @@ const previewData = [
     id: "statutory-approvals",
     title: "Government Liaisoning",
     description: "Representing client interests in front of municipal bodies, utility boards, and state secretariats.",
-    imageUrl: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&q=80&w=800",
     iconName: "Briefcase"
   },
   {
     id: "statutory-approvals",
     title: "Fire & Safety Services",
     description: "Structural fire safety consultations and compliance audits based on national building codes.",
-    imageUrl: "https://images.unsplash.com/photo-1542622589-70335e236318?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&q=80&w=800",
     iconName: "Flame"
   },
   {
@@ -131,7 +131,7 @@ export function ServicesPreviewSection({ setCurrentPage, setActiveCategory }: Se
             <div 
               key={service.id}
               onClick={() => handleNavigateToService(service.id)}
-              className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer group"
+              className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer group pb-6"
             >
               <div>
                 {/* Visual Cover Image */}
@@ -141,34 +141,22 @@ export function ServicesPreviewSection({ setCurrentPage, setActiveCategory }: Se
                     alt={service.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute bottom-4 left-6 flex items-center space-x-3 text-white pr-4">
-                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shrink-0">
-                      <IconComponent name={service.iconName} className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-extrabold text-white leading-tight drop-shadow-md">
-                      {service.title}
-                    </h3>
+                  {/* Category tag badge at top-left */}
+                  <div className="absolute top-3 left-3 flex items-center space-x-1.5 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg uppercase tracking-wide">
+                    <IconComponent name={service.iconName} className="h-3.5 w-3.5" />
+                    <span>Scorpii Expert</span>
                   </div>
                 </div>
 
-                {/* Description */}
-                <div className="p-6">
-                  <p className="text-slate-700 text-sm leading-relaxed font-medium">
+                {/* Title & Description in standard flow */}
+                <div className="p-6 space-y-3">
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed font-medium">
                     {service.description}
                   </p>
                 </div>
-              </div>
-
-              {/* Action Button */}
-              <div className="px-6 pb-6 pt-2">
-                <Button 
-                  className="w-full justify-between items-center group-hover:bg-blue-600 group-hover:text-white transition-colors py-5 border border-slate-200 hover:border-blue-600 rounded-xl text-slate-900 font-semibold"
-                  variant="outline"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
               </div>
             </div>
           ))}

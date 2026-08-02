@@ -47,7 +47,7 @@ const serviceStatutory = serviceStatutoryImg;
 const serviceEvents = serviceEventsImg;
 const serviceDooh = serviceDoohImg;
 const adZenBottles = "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&q=80&w=800";
-const serviceOoh = "https://images.unsplash.com/photo-1551203673-455faad2719d?auto=format&fit=crop&q=80&w=800";
+const serviceOoh = "https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=800";
 const serviceMedia = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800";
 const serviceActivations = "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800";
 
@@ -802,60 +802,7 @@ export function ServiceSection({ setCurrentPage, activeCategory, setActiveCatego
             Statutory approvals, expert event coordination, and multi-channel advertising solutions engineered to accelerate business compliance and market presence.
           </p>
 
-          {/* Interactive Search Bar */}
-          <div className="max-w-xl mx-auto relative mt-8">
-            <div className="relative">
-              <Search className="absolute left-4 top-3.5 h-5 w-5 text-slate-400" />
-              <Input
-                type="text"
-                placeholder="Search services (e.g. FSSAI, Billboard, Wedding, Zonal)..."
-                className="w-full bg-white/10 border-white/20 text-white pl-12 pr-4 py-6 rounded-xl text-lg focus:bg-white focus:text-slate-950 focus:border-blue-500 transition-all placeholder:text-slate-400"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {searchQuery && (
-                <button 
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-4 text-slate-400 hover:text-white"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              )}
-            </div>
 
-            {/* Search Dropdown Results */}
-            {searchQuery && (
-              <div className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-slate-200 z-50 text-slate-800 text-left overflow-hidden">
-                <div className="p-3 bg-slate-50 border-b border-slate-100 text-xs font-semibold text-slate-500">
-                  Search Results ({searchResults.length})
-                </div>
-                {searchResults.length > 0 ? (
-                  <div className="max-h-80 overflow-y-auto">
-                    {searchResults.map((result, i) => (
-                      <div 
-                        key={i} 
-                        onClick={() => handleSearchResultClick(result.categoryId, result.text)}
-                        className="p-4 hover:bg-blue-50 cursor-pointer border-b border-slate-100 last:border-0 flex justify-between items-center transition-colors"
-                      >
-                        <div className="flex-1 pr-4">
-                          <p className="text-sm font-semibold text-slate-800">{result.text}</p>
-                          <p className="text-xs text-slate-500 mt-1">
-                            Found in <span className="font-semibold text-blue-600">{result.categoryTitle}</span>
-                            {result.subheading && ` > ${result.subheading}`}
-                          </p>
-                        </div>
-                        <ChevronRight className="h-4 w-4 text-slate-400 flex-shrink-0" />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="p-6 text-center text-slate-500 text-sm">
-                    No matching services found. Try searching for "NOC", "BBMP", "Video", or "Display".
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
         </div>
       </div>
 
@@ -900,46 +847,14 @@ export function ServiceSection({ setCurrentPage, activeCategory, setActiveCatego
                         </h3>
                       </div>
                     </div>
-                    
-                    <div className="p-6 space-y-4">
-                      {/* Description */}
-                      <p className="text-slate-600 text-sm leading-relaxed font-medium">
-                        {service.description}
-                      </p>
-
-                      {/* Service points preview */}
-                      <div className="space-y-2.5 border-t border-slate-100 pt-4">
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Key Offerings</p>
-                        
-                        {/* If statutory approvals, show subsections */}
-                        {service.subsections ? (
-                          service.subsections.slice(0, 3).map((sub, idx) => (
-                            <div key={idx} className="flex items-center space-x-2 text-slate-700 text-sm font-medium">
-                              <Check className="h-4 w-4 text-blue-600 shrink-0" />
-                              <span className="truncate">{sub.title.substring(3)}</span>
-                            </div>
-                          ))
-                        ) : (
-                          service.points && service.points.slice(0, 3).map((point, idx) => (
-                            <div key={idx} className="flex items-center space-x-2 text-slate-700 text-sm font-medium">
-                              <Check className="h-4 w-4 text-blue-600 shrink-0" />
-                              <span className="truncate">{point.title}</span>
-                            </div>
-                          ))
-                        )}
-                        <span className="text-blue-600 font-semibold text-xs inline-flex items-center mt-2 group-hover:translate-x-1 transition-transform">
-                          Explore all details <ChevronRight className="h-3 w-3 ml-0.5" />
-                        </span>
-                      </div>
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                        {service.title}
+                      </h3>
                     </div>
                   </div>
 
-                  <div className="px-6 pb-6 pt-2">
-                    <Button className="w-full justify-between items-center group-hover:bg-blue-600 group-hover:text-white transition-colors py-5 border border-slate-200 hover:border-blue-600 rounded-xl" variant="outline">
-                      <span>Explore Category</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </div>
+
                 </div>
               ))}
             </div>
@@ -1028,19 +943,19 @@ export function ServiceSection({ setCurrentPage, activeCategory, setActiveCatego
                     alt={activeCategoryData?.title || ''} 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/60 to-transparent"></div>
-                  <div className="absolute bottom-8 left-8 right-8 space-y-3 text-white">
-                    <div className={`inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-600/90 backdrop-blur-sm text-white shadow-lg`}>
-                      <IconComponent name={activeCategoryData?.iconName || ''} className="h-4 w-4 mr-1 text-white" />
+                </div>
+
+                <div className="p-8 space-y-6 pt-6">
+                  <div className="space-y-3">
+                    <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-100 text-blue-800 shadow-sm">
+                      <IconComponent name={activeCategoryData?.iconName || ''} className="h-4 w-4 mr-1 text-blue-700" />
                       <span>Scorpii Expert service</span>
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-xl">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
                       {activeCategoryData?.title}
                     </h2>
                   </div>
-                </div>
 
-                <div className="p-8 space-y-6 pt-0">
                   <p className="text-slate-700 text-base leading-relaxed font-medium">
                     {activeCategoryData?.description}
                   </p>

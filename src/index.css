@@ -2322,3 +2322,83 @@ body {
     height: 0;
   }
 }
+
+/* Custom additions for missing Tailwind classes in ServiceSection */
+.bg-slate-950 {
+  background-color: #020617 !important;
+}
+
+.bg-slate-900 {
+  background-color: #0f172a !important;
+}
+
+.bg-slate-800 {
+  background-color: #1e293b !important;
+}
+
+.bg-slate-700\/60 {
+  background-color: rgba(51, 65, 85, 0.6) !important;
+}
+
+.bg-slate-800\/60 {
+  background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+.bg-slate-900\/60 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.bg-slate-950\/95 {
+  background-color: rgba(2, 6, 23, 0.95) !important;
+}
+
+.bg-slate-850 {
+  background-color: #151f32 !important;
+}
+
+.bg-slate-50\/50 {
+  background-color: rgba(248, 250, 252, 0.5) !important;
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops)) !important;
+}
+
+.from-slate-950 {
+  --tw-gradient-from: #020617 var(--tw-gradient-from-position, 0%) !important;
+  --tw-gradient-to: rgba(2, 6, 23, 0) var(--tw-gradient-to-position, 100%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.via-slate-900 {
+  --tw-gradient-via: #0f172a var(--tw-gradient-via-position, 50%) !important;
+  --tw-gradient-to: rgba(15, 23, 42, 0) var(--tw-gradient-to-position, 100%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to) !important;
+}
+
+.to-slate-800 {
+  --tw-gradient-to: #1e293b var(--tw-gradient-to-position, 100%) !important;
+}
+
+/* Custom space-y-24 spacing utility */
+.space-y-24 > :not(:last-child) {
+  margin-bottom: 6rem !important;
+}
+
+/* Premium glassmorphic cards for Why Choose Us */
+.why-choose-card {
+  background: rgba(30, 41, 59, 0.45) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.why-choose-card:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+
+
