@@ -80,8 +80,8 @@ export function HomeSection() {
             <div className="space-y-4">
               {/* Slogan */}
               <div className="flex items-center">
-                <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-                  “The <span className="text-blue-600">better</span> way, the <span className="text-blue-600">better</span> thing”
+                <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-600 tracking-tight">
+                  “The better way, the better thing”
                 </span>
               </div>
 
