@@ -240,7 +240,7 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
         <div className="border-t border-slate-200 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-600 text-center md:text-left mb-4 md:mb-0">
-              © {currentYear} Scorpii Solutions. All rights reserved. | Creative Advertising That Builds Trust & Growth
+              © {currentYear} Scorpii Solutions. All rights reserved.
             </p>
             <button 
               onClick={scrollToTop}
