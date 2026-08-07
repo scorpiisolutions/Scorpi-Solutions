@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Shield, Award, Users, Sparkles } from 'lucide-react';
+import { Shield, Award, Users } from 'lucide-react';
 import { Button } from './ui/button';
 const slides = [
   {
@@ -79,8 +79,7 @@ export function HomeSection() {
           <div className="space-y-8 z-10">
             <div className="space-y-4">
               {/* Slogan */}
-              <div className="flex items-center space-x-2.5">
-                <Sparkles className="h-5 w-5 text-blue-600 shrink-0" />
+              <div className="flex items-center">
                 <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
                   “The <span className="text-blue-600">better</span> way, the <span className="text-blue-600">better</span> thing”
                 </span>
