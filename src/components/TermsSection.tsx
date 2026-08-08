@@ -1,4 +1,4 @@
-import { FileText, Mail, Phone, MapPin } from 'lucide-react';
+import { FileText, Mail, MapPin } from 'lucide-react';
 
 export function TermsSection() {
   return (
@@ -229,18 +229,6 @@ export function TermsSection() {
                       className="text-blue-600 hover:text-blue-700 font-medium underline transition-colors"
                     >
                       scorpiisolutions@gmail.com
-                    </a>
-                  </p>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                  <p>
-                    Phone:{' '}
-                    <a
-                      href="tel:+919945939407"
-                      className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                    >
-                      9945939407
                     </a>
                   </p>
                 </div>

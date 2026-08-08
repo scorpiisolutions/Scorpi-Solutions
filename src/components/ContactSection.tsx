@@ -4,7 +4,7 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Card, CardContent } from './ui/card';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
+import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { toast } from 'sonner';
 
 export function ContactSection() {
@@ -167,17 +167,6 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-bold text-slate-900 mb-1">Email Us</h4>
                     <p className="text-slate-700 font-medium">scorpiisolutions@gmail.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 mb-1">Call Us</h4>
-                    <p className="text-slate-700 font-medium">+91 9945939407</p>
-                    <p className="text-xs text-slate-500 mt-0.5">Mon-Sat 9AM-6PM EST</p>
                   </div>
                 </div>
                 

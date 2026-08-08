@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 
 interface FooterProps {
@@ -49,10 +49,6 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-600" />
                   <span className="text-slate-600">scorpiisolutions@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-blue-600" />
-                  <span className="text-slate-600">+91 9945939407</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-600" />

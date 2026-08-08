@@ -1258,7 +1258,6 @@ export function ServiceSection({ setCurrentPage, activeCategory, setActiveCatego
                 <p className="text-slate-600">Scorpii Solutions – Ad Zen Division</p>
                 <p className="text-slate-600">Bengaluru, India</p>
                 <p className="text-slate-600"><strong>Email:</strong> scorpiisolutions@gmail.com</p>
-                <p className="text-slate-600"><strong>Phone:</strong> +91 9945939407</p>
               </div>
             </div>
             <div className="sticky bottom-0 bg-slate-50 border-t border-slate-200 p-4 flex justify-end">
