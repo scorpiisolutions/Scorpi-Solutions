@@ -1,4 +1,4 @@
-import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Mail, MapPin, Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 
 interface FooterProps {
@@ -194,15 +194,17 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
   <Facebook className="h-5 w-5 text-blue-600" />
 </a>
 
-               <a 
-  href="https://x.com/Scorpii_1910"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Twitter profile"
-  className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
->
-  <Twitter className="h-5 w-5 text-blue-600" />
-</a>
+                <a 
+                  href="https://x.com/Scorpii_1910"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (formerly Twitter)"
+                  className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="#2563eb">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
 
 
                 <a 
