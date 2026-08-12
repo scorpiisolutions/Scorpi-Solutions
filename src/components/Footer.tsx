@@ -185,14 +185,14 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
               <h4 className="font-bold text-slate-800 mb-3">Follow Us</h4>
               <div className="flex space-x-3">
                 <a 
-  href="https://www.facebook.com/share/1Cr4TxXhg2/" 
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Facebook"
-  className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
->
-  <Facebook className="h-5 w-5 text-blue-600" />
-</a>
+                  href="https://www.facebook.com/share/1DLPYiTKDw/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
+                >
+                  <Facebook className="h-5 w-5 text-blue-600" />
+                </a>
 
                 <a 
                   href="https://x.com/Scorpii_1910"

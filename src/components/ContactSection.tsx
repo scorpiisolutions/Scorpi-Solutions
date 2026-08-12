@@ -186,7 +186,7 @@ export function ContactSection() {
               <h3 className="text-lg font-bold text-slate-900 mb-4">Connect With Us</h3>
               <div className="grid grid-cols-2 gap-3">
                 <a 
-                  href="https://www.facebook.com/share/1Cr4TxXhg2/"
+                  href="https://www.facebook.com/share/1DLPYiTKDw/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
